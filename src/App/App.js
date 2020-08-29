@@ -4,7 +4,11 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import fbConnection from '../helpers/data/connection';
-import Auth from '../javascripts/components/pages/Auth/Auth';
+import Auth from '../components/pages/Auth/Auth';
+import Home from '../components/pages/Home/Home';
+import NewBrb from '../components/pages/NewBrb/NewBrb';
+import SingleBrb from '../components/pages/SingleBrb/SingleBrb';
+import EditBrb from '../components/pages/EditBrb/EditBrb';
 
 fbConnection.firebaseApp();
 
@@ -42,6 +46,10 @@ class App extends React.Component {
       <div className="App">
         <h2>INSIDE APP COMPONENT</h2>
         {loadComponent()}
+        <Home />
+        <NewBrb />
+        <SingleBrb />
+        <EditBrb />
       </div>
     );
   }
