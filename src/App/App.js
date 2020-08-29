@@ -66,7 +66,6 @@ class App extends React.Component {
                 <PrivateRoute path="/new" component={NewBrb} authed={authed} />
                 <PrivateRoute path="/edit/:brbId" component={EditBrb} authed={authed} />
                 <PrivateRoute path="/brbs/:brbId" component={SingleBrb} authed={authed} />
-                <PrivateRoute path="/new" component={NewBrb} authed={authed} />
                 <PublicRoute path="/auth" component={Auth} authed={authed} />
                 <Redirect from="*" to="/home" />
               </Switch>
