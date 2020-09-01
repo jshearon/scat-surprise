@@ -56,7 +56,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h2>INSIDE APP COMPONENT</h2>
+        <h2>Birbs!</h2>
          <BrowserRouter>
           <React.Fragment>
             <Navbar authed={authed} />
@@ -64,8 +64,8 @@ class App extends React.Component {
               <Switch>
                 <PrivateRoute path="/home" component={Home} authed={authed} />
                 <PrivateRoute path="/new" component={NewBrb} authed={authed} />
-                <PrivateRoute path="/edit/:brbId" component={EditBrb} authed={authed} />
-                <PrivateRoute path="/brbs/:brbId" component={SingleBrb} authed={authed} />
+                <PrivateRoute path="/edit/:birbId" component={EditBrb} authed={authed} />
+                <PrivateRoute path="/birb/:birbId" component={SingleBrb} authed={authed} />
                 <PublicRoute path="/auth" component={Auth} authed={authed} />
                 <Redirect from="*" to="/home" />
               </Switch>
